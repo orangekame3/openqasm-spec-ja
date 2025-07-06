@@ -10,12 +10,9 @@ OpenQASM 3.0の言語仕様について詳しく解説します。
    :maxdepth: 2
    :caption: 言語仕様
 
-   基本構文 <syntax>
    データ型 <types>
    量子ゲート <gates>
-   制御構造 <control>
-   関数定義 <functions>
-   標準ライブラリ <stdlib>
+   古典計算 <classical>
 
 概要
 ----
