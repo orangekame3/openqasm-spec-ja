@@ -13,6 +13,11 @@ OpenQASM 3.0の言語仕様について詳しく解説します。
    データ型 <types>
    量子ゲート <gates>
    古典計算 <classical>
+   基本命令 <insts>
+   サブルーチン <subroutines>
+   スコープ <scope>
+   コメント <comments>
+   標準ライブラリ <standard_library>
 
 概要
 ----
