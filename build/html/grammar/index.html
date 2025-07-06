@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="ja" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>文法定義 &#8212; OpenQASM 3.0 仕様書 3.0</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=09c6eec6" />
+    <script src="../_static/documentation_options.js?v=88141cbd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=4755f45a"></script>
+    <link rel="canonical" href="https://orangekame3.github.io/openqasm-spec-ja/grammar/index.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="リリースノート" href="../release_notes.html" />
+    <link rel="prev" title="言語リファレンス" href="../language/index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">OpenQASM 3.0 仕様書</a></h1>
+
+
+
+<p class="blurb">OpenQASM 3.0 仕様書 日本語版</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=orangekame3&repo=openqasm-spec-ja&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>ナビゲーション</h3>
+<p class="caption" role="heading"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">イントロダクション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../language/index.html">言語リファレンス</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">文法定義</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">基本構造</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">文法ルール</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes.html">リリースノート</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">関連リンク</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/openqasm/openqasm">GitHub リポジトリ（原文）</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/orangekame3/openqasm-spec-ja">GitHub リポジトリ（日本語版）</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../language/index.html" title="前の章へ">言語リファレンス</a></li>
+      <li>Next: <a href="../release_notes.html" title="次の章へ">リリースノート</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>文法定義<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>この章は現在翻訳作業中です。詳細な内容は今後追加される予定です。</p>
+</div>
+<p>OpenQASM 3.0の正式な文法定義について説明します。</p>
+<div class="toctree-wrapper compound">
+</div>
+<section id="id2">
+<h2>概要<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>OpenQASM 3.0の文法はEBNF（Extended Backus-Naur Form）記法を使用して定義されています。</p>
+</section>
+<section id="id3">
+<h2>基本構造<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<p>プログラムの基本構造は以下の通りです：</p>
+<div class="highlight-ebnf notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="o">=</span> <span class="k">version_string </span><span class="p">(</span><span class="k">statement</span><span class="p">)</span><span class="err">*</span>
+<span class="k">statement </span><span class="err">=</span> <span class="k">quantum_statement </span><span class="p">|</span> <span class="k">classical_statement</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>文法ルール<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>詳細な文法ルールについては、各セクションを参照してください。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>完全な文法定義の翻訳は順次進めていきます。最新の情報については原文を参照してください。</p>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &#169;2017-2025, OpenQASM Contributors.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/grammar/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/orangekame3/openqasm-spec-ja" class="github">
+        <img src="../_static/github-banner.svg" alt="Fork me on GitHub" class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
