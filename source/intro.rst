@@ -24,6 +24,17 @@ OpenQASM 3は、OpenQASM 2から大幅に拡張されています。量子アル
 .. note::
    この日本語版は、OpenQASM 3.0の理解を深めるための翻訳版です。最新かつ正確な情報については、常に `公式のOpenQASMリポジトリ <https://github.com/openqasm/openqasm>`_ を参照してください。
 
+.. warning::
+   **翻訳について**
+   
+   この翻訳は、Large Language Model (LLM)を活用して作成されています。翻訳の精度向上に努めていますが、以下の点にご注意ください：
+   
+   - 専門用語の翻訳に不正確な部分が含まれる可能性があります
+   - 文脈によっては意図とは異なる翻訳になる場合があります
+   - 重要な技術的判断を行う際は、必ず原文を確認してください
+   
+   翻訳の改善にご協力いただける場合は、`GitHubリポジトリ <https://github.com/orangekame3/openqasm-spec-ja>`_ でIssueやPull Requestをお送りください。
+
 関連文書
 --------
 
