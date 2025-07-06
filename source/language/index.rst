@@ -18,6 +18,10 @@ OpenQASM 3.0の言語仕様について詳しく解説します。
    スコープ <scope>
    コメント <comments>
    標準ライブラリ <standard_library>
+   タイミング制御 <delays>
+   ディレクティブ <directives>
+   パルス制御 <pulses>
+   OpenPulse文法 <openpulse>
 
 概要
 ----
