@@ -118,13 +118,13 @@ OpenQASM 3.0には、最も一般的に使用される量子ゲートを定義�
 .. code-block:: qasm3
 
    // X軸周りの回転
-   gate rx(theta) q { U(theta, -π/2, π/2) q; }
+   gate rx(θ) q { U(θ, -π/2, π/2) q; }
    
    // Y軸周りの回転
-   gate ry(theta) q { U(theta, 0, 0) q; }
+   gate ry(θ) q { U(θ, 0, 0) q; }
    
    // Z軸周りの回転
-   gate rz(theta) q { U(0, 0, theta) q; }
+   gate rz(θ) q { U(0, 0, θ) q; }
 
 .. math::
 

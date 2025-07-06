@@ -35,9 +35,9 @@ OpenQASMでは3つの方法でゲートを定義できます：
    }
    
    // パラメータ化されたゲート
-   gate rz(theta) q {
-       gphase(-theta/2);
-       u(0, 0, theta) q;
+   gate rz(θ) q {
+       gphase(-θ/2);
+       u(0, 0, θ) q;
    }
    
    // 複数量子ビットゲート
@@ -53,12 +53,12 @@ OpenQASMでは3つの方法でゲートを定義できます：
 .. code-block:: qasm3
 
    // 回転ゲートの定義
-   gate rx(theta) q {
-       u(theta, -π/2, π/2) q;
+   gate rx(θ) q {
+       u(θ, -π/2, π/2) q;
    }
    
-   gate ry(theta) q {
-       u(theta, 0, 0) q;
+   gate ry(θ) q {
+       u(θ, 0, 0) q;
    }
    
    // 使用例
@@ -254,11 +254,11 @@ Uゲートの行列表現：
 .. code-block:: qasm3
 
    qubit q;
-   angle theta = π/4;
+   angle θ = π/4;
    
    // 以下は等価
-   rx(theta) q;
-   rx(theta + 2π) q;
+   rx(θ) q;
+   rx(θ + 2π) q;
 
 式としてのパラメータ
 ~~~~~~~~~~~~~~~~~~~~
